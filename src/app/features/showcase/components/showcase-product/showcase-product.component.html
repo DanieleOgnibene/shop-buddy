@@ -1,0 +1,19 @@
+<div *ngIf="!!product" class="product-container">
+  <div class="header">
+    <div class="left">
+      <h5 class="title" data-test="product-title">{{product.title}}</h5>
+      <span class="email" data-test="product-email">{{product.email}}</span>
+    </div>
+    <app-favourites-button (buttonClick)="heartClick.emit()" [isFavourite]="product.isFavourite"
+                           data-test="favourite-button" tooltipEmpty="Add to Favourites"
+                           tooltipFull="Remove from Favourites"></app-favourites-button>
+  </div>
+  <div class="content" data-test="product-image" [ngStyle]="{backgroundImage: 'url(' + product.image + ')'}"></div>
+  <div class="footer">
+    <app-custom-button (buttonClick)="onDetailsClick()" data-test="view-product-details-button" text="View details"
+                       textColor="secondary"></app-custom-button>
+    <div class="price">
+      <h5 data-test="product-price">{{+product.price | number: '0.2'}} €</h5>
+    </div>
+  </div>
+</div>

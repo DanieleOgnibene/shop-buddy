@@ -1,0 +1,5 @@
+<div (click)="!disabled && buttonClick.emit()" [ngClass]="{disabled: disabled}" class="button-container"
+     data-test="button">
+  <ng-content></ng-content>
+  <span *ngIf="!!text" class="button-text" data-test="button-text">{{text}}</span>
+</div>

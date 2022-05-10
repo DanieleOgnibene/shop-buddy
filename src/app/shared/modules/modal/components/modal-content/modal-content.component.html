@@ -1,0 +1,9 @@
+<div class="modal-container">
+  <div class="modal-header">
+    <h5 class="title" data-test="modal-title">{{modalTitle}}</h5>
+    <i class="fa fa-close close-button" title="Close" (click)="close.emit()" data-test="close-button"></i>
+  </div>
+  <div class="modal-content">
+    <ng-content></ng-content>
+  </div>
+</div>

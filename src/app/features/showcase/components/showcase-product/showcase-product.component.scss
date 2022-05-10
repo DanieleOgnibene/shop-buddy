@@ -1,0 +1,49 @@
+.product-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 13px;
+  max-width: 85vw;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
+
+  .header,
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header {
+    .left {
+      flex: 1 1 auto;
+      overflow: hidden;
+
+      .title,
+      .email {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        display: block;
+      }
+    }
+
+  }
+
+  .content {
+    width: 280px;
+    height: 280px;
+    max-width: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+  }
+
+  .footer {
+    align-items: center;
+
+  }
+
+}

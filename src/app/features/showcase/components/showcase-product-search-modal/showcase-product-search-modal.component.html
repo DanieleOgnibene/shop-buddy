@@ -1,0 +1,29 @@
+<app-modal-content (close)="close.emit()" modalTitle="Search" data-test="modal-container">
+  <div class="container">
+    <form class="search-form" [formGroup]="searchFormGroup">
+      <div class="title">
+        <label for="title">Title</label>
+        <input formControlName="title" id="title" type="text" data-test="title-input">
+      </div>
+      <div class="email">
+        <label for="email">Email</label>
+        <input formControlName="email" id="email" type="email" data-test="email-input">
+      </div>
+      <div [ngClass]="{invalid: isPriceFormGroupInvalid}" class="price" formGroupName="price" data-test="price-form-group-element">
+        <label for="price">Price</label>
+        <input formControlName="min" id="price" min="0" type="number" data-test="min-price-input">
+        <label class="price-to" for="price-to">to</label>
+        <input formControlName="max" id="price-to" min="0" type="number" data-test="max-price-input">
+      </div>
+      <div class="description">
+        <label for="description">Description</label>
+        <textarea id="description" formControlName="description" data-test="description-textarea"></textarea>
+      </div>
+    </form>
+    <div class="buttons">
+      <app-custom-button (buttonClick)="onResetClick()" textColor="secondary" text="Reset" data-test="reset-button"></app-custom-button>
+      <app-custom-button (buttonClick)="onApplyClick()" [disabled]="!searchFormGroup?.valid" text="Apply"
+                         textColor="highlight" data-test="apply-button"></app-custom-button>
+    </div>
+  </div>
+</app-modal-content>

@@ -1,0 +1,75 @@
+:host {
+  width: 100%;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    .search-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      flex-wrap: wrap;
+      flex: 1 1 auto;
+
+      input,
+      textarea {
+        border-radius: 3px;
+        border: 1px solid black;
+        padding: 3px;
+        outline: none;
+        width: 100%;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      .title,
+      .email,
+      .price {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        label {
+          flex-shrink: 0;
+          &:not(.price-to) {
+            width: 46px;
+          }
+        }
+      }
+
+      .price.invalid {
+        label {
+          color: #ff726f;
+        }
+        input {
+          border-color: #ff726f;
+        }
+      }
+
+      .description {
+        display: flex;
+        column-gap: 10px;
+
+        label {
+          align-self: flex-start;
+        }
+
+      }
+
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+      column-gap: 10px;
+      padding-top: 15px;
+      border-top: 2px solid #eb89b42e;
+    }
+
+  }
+
+}

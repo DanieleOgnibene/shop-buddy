@@ -1,0 +1,21 @@
+<ng-container *ngIf="product$ | async as product">
+  <app-modal-content (close)="close.emit()" [modalTitle]="product.title" data-test="modal-container">
+    <div class="container">
+      <div class="content">
+        <div [ngStyle]="{backgroundImage: 'url(' + product.image + ')'}" class="image" data-test="product-image"></div>
+        <div class="description-container">
+          <h5 class="title">Description</h5>
+          <p class="description" data-test="product-description">{{product.description}}</p>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="email-container">
+          <h5>Contact info</h5>
+          <a href="mailto:{{product.email}}" data-test="product-email">{{product.email}}</a>
+        </div>
+        <app-favourites-button (buttonClick)="onToggleFavouritesClick(product)" [isFavourite]="product.isFavourite"
+                               data-test="favourite-button"></app-favourites-button>
+      </div>
+    </div>
+  </app-modal-content>
+</ng-container>

@@ -1,0 +1,18 @@
+<div class="container">
+  <app-showcase-products-filters data-test="products-filters"></app-showcase-products-filters>
+  <ng-container *ngIf="products$ | async as products; else noProducts">
+    <ng-container *ngIf="products.length > 0; else noProducts">
+      <div class="products-list">
+        <div #showcaseProducts *ngFor="let product of products; trackBy: trackByFn">
+          <app-showcase-product (heartClick)="onToggleFavourite(product)" [product]="product"
+                                data-test="product"></app-showcase-product>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+  <ng-template #noProducts>
+    <div class="no-products" data-test="no-products-message">
+      <span>No products found</span>
+    </div>
+  </ng-template>
+</div>

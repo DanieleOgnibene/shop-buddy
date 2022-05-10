@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/palette';
+@import './assets/mixins';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  font-family: Poppins, Helvetica, sans-serif;
+  color: var(--color-secondary);
+  font-size: 15px
+}
+
+html {
+  background-color: var(--color-primary);
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.mobile {
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+.tablet {
+  display: none;
+
+  @include tablet {
+    display: inherit;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+.desktop {
+  display: none;
+
+  @include desktop {
+    display: inherit;
+  }
+}

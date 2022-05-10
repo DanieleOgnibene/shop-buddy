@@ -1,0 +1,8 @@
+<div [ngStyle]="{'font-size': fontSize + 'px'}" class="heart-container" data-test="heart-container">
+  <ng-container *ngIf="isFull; else empty">
+    <i [title]="tooltipFull" class="fa fa-heart" data-test="full-heart"></i>
+  </ng-container>
+  <ng-template #empty>
+    <i [title]="tooltipEmpty" class="fa fa-heart-o" data-test="empty-heart"></i>
+  </ng-template>
+</div>

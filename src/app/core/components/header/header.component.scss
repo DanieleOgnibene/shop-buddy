@@ -1,0 +1,19 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+
+  .logo {
+    height: 100%;
+    padding: 10px 0;
+    display: flex;
+
+    img {
+      height: 100%;
+      width: 100px;
+    }
+
+  }
+
+}

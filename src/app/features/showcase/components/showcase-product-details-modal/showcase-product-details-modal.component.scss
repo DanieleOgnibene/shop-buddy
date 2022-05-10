@@ -1,0 +1,36 @@
+@import "src/assets/mixins";
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    .image {
+      width: 100%;
+      min-width: 100px;
+      height: 200px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: var(--color-primary);
+      border-radius: 5px;
+    }
+
+    .description-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+  }
+
+  .footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+

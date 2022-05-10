@@ -1,0 +1,21 @@
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 3px 7px;
+  transition: 0.1s ease-in-out all;
+
+  .button-text {
+    color: var(--color-highlight);
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  &:hover {
+    background-color: var(--color-primary);
+    transform: scale(1.02);
+  }
+
+}

@@ -1,0 +1,25 @@
+<app-modal-content (close)="close.emit()" [modalTitle]="'My Favourites'" data-test="modal-container">
+  <div class="container">
+    <div class="search-filter">
+      <label for="search">Search</label>
+      <input [formControl]="searchFormControl" data-test="search-input" id="search" placeholder="Title" type="text">
+    </div>
+    <div class="favourites-list" *ngIf="favourites$ | async as favourites; else noFavourites">
+      <ng-container *ngIf="favourites.length > 0; else noFavourites">
+        <div *ngFor="let favourite of favourites; trackBy: trackByFn" class="favourite" data-test="favourite">
+          <div class="image-and-title">
+            <div [ngStyle]="{backgroundImage: 'url(' + favourite.image + ')'}" class="image" data-test="favourite-image"></div>
+            <h5 class="title" data-test="favourite-title">{{ favourite.title }}</h5>
+          </div>
+          <app-favourites-button (buttonClick)="onRemoveFavourite(favourite)" [isFavourite]="true"
+                                 tooltipFull="Remove" data-test="remove-favourite-button"></app-favourites-button>
+        </div>
+      </ng-container>
+    </div>
+    <ng-template #noFavourites>
+      <div class="no-favourites" data-test="no-favourites-message">
+        Add some favourites to get started!
+      </div>
+    </ng-template>
+  </div>
+</app-modal-content>

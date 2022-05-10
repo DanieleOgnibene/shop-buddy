@@ -1,0 +1,31 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .filters-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 15px 22px 15px 15px;
+    width: 310px;
+    max-width: 85vw;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
+
+    .sort-container {
+      display: flex;
+      align-items: center;
+      column-gap: 7px;
+
+      select {
+        outline: none;
+        border-radius: 3px;
+      }
+    }
+
+  }
+
+}

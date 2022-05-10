@@ -1,0 +1,14 @@
+<div class="filters-container">
+  <app-custom-button textColor="secondary" (buttonClick)="onSearchClick()" text="Search" data-test="search-button"></app-custom-button>
+  <div class="sort-container">
+    <label for="product-sort">Sort by</label>
+    <select id="product-sort" #selectElement [value]="(sortConfig$ | async)?.field"
+            (change)="onSortChange(selectElement.value)" data-test="sort-by-select">
+      <option selected>-</option>
+      <option value="title" data-test="title-option">Title</option>
+      <option value="description" data-test="description-option">Description</option>
+      <option value="price" data-test="price-option">Price</option>
+      <option value="email" data-test="email-option">Email</option>
+    </select>
+  </div>
+</div>

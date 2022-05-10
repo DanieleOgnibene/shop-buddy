@@ -1,0 +1,30 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+
+  .header {
+    flex: 0 0 auto;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 74px;
+    z-index: 1;
+    box-shadow: 0 0 40px rgb(0 0 0 / 10%);
+  }
+
+  .content {
+    margin-top: 73px;
+    flex: 1 1 auto;
+    padding: 40px 25px;
+    overflow-y: auto;
+  }
+}
+
+.footer {
+  flex: 0 0 auto;
+  background-color: #ffffff;
+}

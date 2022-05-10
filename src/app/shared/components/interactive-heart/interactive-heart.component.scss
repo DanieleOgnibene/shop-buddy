@@ -1,0 +1,11 @@
+
+.heart-container {
+  position: relative;
+
+  i {
+    color: var(--color-highlight);
+    cursor: pointer;
+    transition: 50ms ease-in all;
+  }
+
+}
