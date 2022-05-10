@@ -1,10 +1,10 @@
 
-#ShopBuddy
-##*We help you find the products you love!*<br/><br/>
+# ShopBuddy
+## *We help you find the products you love!*<br/><br/>
 
 ![This is an image](./src/assets/images/shop-buddy-screenshot.png)
 
-###[Demo hosted on *Heroku*](https://shop-buddy.herokuapp.com/)
+### [Demo hosted on *Heroku*](https://shop-buddy.herokuapp.com/)
 
 ### Development server
 
